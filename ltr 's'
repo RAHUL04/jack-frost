@@ -1,0 +1,24 @@
+jack-frost
+==========
+
+centred around fun...
+#include<conio.h>
+#include<stdio.h>
+int main()
+{ int c,d;
+
+	char name[]="rahul";
+	clrscr();
+	for(c=5;c>0;c--)
+		printf("|%-5.*s|\n",c,name);
+	for(c=1;c<=5;c++)
+		printf("|%-5.*s|\n",c,name);
+	for(c=5;c>0;c--)
+		printf("|%5.*s|\n",c,name);
+	for(c=1;c<=5;c++)
+		printf("|%5.*s|\n",c,name);
+
+
+	getch();
+	return 0;
+}
