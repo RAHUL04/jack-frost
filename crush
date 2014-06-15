@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+    char a[10], b[10],c;
+    char r[6]={'f','l','a','m','e','s'};
+    int logic ,i,j,k;
+    printf("\n ~~~~~~~~~CHECK THE RELATIONSHIP WITH YOU CRUSH~~~~~~~~~~");
+    printf("\n enter the name:");
+    scanf("%s",a);
+    printf("\n enter your partener name: ");
+    scanf("%s",b);
+    logic=strlen(a)+strlen(b);
+    for(i=0;i<strlen(b);i++)
+    {
+        for(j=0;j<strlen(a);j++)
+        {
+            if(b[i]== a[j])
+                logic=logic-2;
+        }
+    }
+
+
+    for(i=0;i<5;i++)
+    {
+
+            if(r[(logic%6)-1]!='0')
+                r[(logic%6)-1]='0';
+            else
+            {
+                k=(logic%6)-1;
+                while(r[k]=='0')
+                {
+                     k++;
+                     k=k%6;
+                }
+                r[k]='0';
+
+            }
+
+
+
+    }
+    for(i=0;i<6;i++)
+    {
+        if(r[i]!='0')
+                c=r[i];
+    }
+    switch(c)
+    {
+    case 'f':
+        printf("\n %s ~~~~//FRIENDS\\~~~~ %s ",a,b);
+        break;
+    case 'l':
+        printf("\n %s ~~~~//LOVES\\~~~~ %s ",a,b);
+        break;
+
+    case 'a':
+
+        printf("\n %s ~~~~//HAS ON AFFECTION\\~~~~ %s ",a,b);
+        break;
+    case 'm':
+        printf("\n %s ~~~~//MARRIES\\~~~~ %s ",a,b);
+        break;
+    case 'e':
+        printf("\n %s ~~~~//ENEMIES\\~~~~ %s ",a,b);
+        break;
+    case 's':
+        printf("\n %s ~~~~//SISTER\\~~~~ %s ",a,b);
+        break;
+    }
+
+}
